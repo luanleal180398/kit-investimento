@@ -1,32 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kit Meu Primeiro Investimento - Comece com Clareza</title>
-<style>
-body{font-family:Arial,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px;background:#0f0f10;color:#f3f4f6;line-height:1.6}
-h1{font-size:2.2em;color:#FF5722}
-h2{color:#FF8A65;margin-top:30px}
-a{color:#FF5722}
-.btn{display:inline-block;background:#FF5722;color:#fff;padding:15px 30px;text-decoration:none;border-radius:8px;font-weight:bold;margin:20px 0}
-.btn:hover{background:#E64A19}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Meu Primeiro Investimento - Comece com Clareza</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: { 500: '#FF5722', 600: '#E64A19', dark: '#0F0F10' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0F0F10; color: #F3F4F6; }
+        .glow { background: radial-gradient(circle at 50% 50%, rgba(255, 87, 34, 0.15) 0%, rgba(15, 15, 16, 0) 70%); }
+    </style>
 </head>
-<body>
-<h1>Kit Meu Primeiro Investimento</h1>
-<p>Pare de adiar seu primeiro investimento por não saber por onde começar. Abra o kit e siga um caminho prático para entender seu perfil, organizar seus primeiros passos e descobrir o que conferir antes de investir.</p>
-<h2>O que vem no kit</h2>
-<ul>
-<li>Raio-X do Investidor — 10 perguntas para entender seu perfil indicativo</li>
-<li>Cartilha Meu Primeiro Investimento — 16 páginas com checklists e conceitos</li>
-<li>Mapa da Primeira Aplicação — 8 etapas visuais para acompanhar sua jornada</li>
-</ul>
-<h2>Por que escolher este kit</h2>
-<p>Sem cursos longos. Sem complicação. Material 100% digital, com acesso após a confirmação da compra. Criado por Junio Queiroz, planejador financeiro e fundador da B3X Investimentos.</p>
-<p><strong>R$ 37,00 — Pagamento único.</strong></p>
-<a href="https://go.hotmart.com/B108363036Q?redirectionUrl=https%3A%2F%2Fkit.maraecreative.com.br" class="btn">QUERO MEU KIT AGORA</a>
-<p style="font-size:0.9em;color:#9ca3af">Material educacional. A aplicação depende da sua situação financeira e da avaliação dos riscos.</p>
-<p><a href="sobre.html">Sobre o Kit</a> | <a href="faq.html">Perguntas Frequentes</a> | <a href="garantia.html">Garantia</a></p>
+<body class="antialiased min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#121214]/90 backdrop-blur-md border-b border-gray-800/60">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-chart-line text-brand-500 text-xl"></i>
+                <span class="text-lg font-bold tracking-tight">B3X<span class="text-brand-500">Invest</span></span>
+            </div>
+            <a href="#comprar" class="px-4 py-2 rounded-full text-sm font-semibold text-white bg-brand-500 hover:bg-brand-600 transition-all">Quero Começar</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow">
+        <section class="relative pt-16 pb-24 glow overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Para quem nunca investiu</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                    Pare de adiar seu primeiro investimento por <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-amber-400">não saber por onde começar.</span>
+                </h1>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+                    Abra o kit e siga um caminho prático para entender seu perfil, organizar seus primeiros passos e descobrir o que conferir antes de investir. Sem curso longo e sem complicação.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://go.hotmart.com/B108363036Q?redirectionUrl=https%3A%2F%2Fkit.maraecreative.com.br" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white bg-brand-500 hover:bg-brand-600 transition-all shadow-lg shadow-brand-500/30 hover:-translate-y-1 text-lg flex items-center justify-center space-x-2">
+                        <span>QUERO MEU KIT AGORA</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500 mt-4"><i class="fa-solid fa-lock mr-1"></i> Compra segura via Hotmart</p>
+            </div>
+        </section>
+
+        <!-- O que vem no kit -->
+        <section class="py-20 bg-[#141416] border-y border-gray-800/50">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Menos conteúdo solto. Mais ferramentas práticas.</h2>
+                    <p class="text-gray-400">O material foi organizado para consultar, preencher e seguir.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl hover:border-brand-500/50 transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Raio-X do Investidor</h3>
+                        <p class="text-gray-400 text-sm">Responda 10 perguntas e entenda seu perfil indicativo e o ponto de partida da sua jornada.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl hover:border-brand-500/50 transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Cartilha Prática</h3>
+                        <p class="text-gray-400 text-sm">Um roteiro visual de 16 páginas com checklists, conceitos explicados e orientações para sua primeira aplicação.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-2xl hover:border-brand-500/50 transition-all hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Mapa da 1ª Aplicação</h3>
+                        <p class="text-gray-400 text-sm">Visualize as oito etapas, identifique onde está e saiba qual é o próximo movimento da sua jornada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section id="comprar" class="py-24 relative overflow-hidden text-center">
+            <div class="absolute inset-0 glow opacity-50"></div>
+            <div class="max-w-2xl mx-auto px-4 relative z-10">
+                <div class="inline-block p-4 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 mb-6">
+                    <i class="fa-solid fa-bag-shopping text-3xl"></i>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Comece pelo básico, com clareza.</h2>
+                <p class="text-gray-400 mb-8">Acesso imediato aos materiais digitais. Garantia de 7 dias.</p>
+                
+                <div class="bg-gray-900/80 border border-gray-700 p-8 rounded-3xl shadow-2xl mb-8">
+                    <p class="text-gray-400 mb-1">Kit Meu Primeiro Investimento</p>
+                    <div class="text-5xl font-black text-white mb-6">R$ 37<span class="text-2xl text-gray-400">,00</span></div>
+                    <a href="https://go.hotmart.com/B108363036Q?redirectionUrl=https%3A%2F%2Fkit.maraecreative.com.br" class="w-full block py-4 rounded-xl font-bold text-white bg-brand-500 hover:bg-brand-600 transition-all shadow-lg text-lg">
+                        GARANTIR MEU ACESSO
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800/60 bg-[#0A0A0B] py-8">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 B3X Investimentos. Todos os direitos reservados.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="sobre.html" class="hover:text-brand-500 transition-colors">Sobre o Kit</a>
+                <a href="faq.html" class="hover:text-brand-500 transition-colors">Perguntas Frequentes</a>
+                <a href="garantia.html" class="hover:text-brand-500 transition-colors">Garantia</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
